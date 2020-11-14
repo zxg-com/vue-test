@@ -1,0 +1,46 @@
+test #项目
+    node_modules  #依赖包
+    public        #公共内容 放置无需使用webpack打包的文件
+    src           #打包内容
+        assets    #静态文件（图片、css、html等）
+        components #组建模块
+        App.vue   #vue根组建
+        main.js   #vue的main入口文件 先加载main.js
+    .gitignore
+    babel.config.js
+    package.json
+    package-lock.json
+
+
+vue组件内容：
+    - template（html的div）
+    - script（js--）
+    - style（css）
+
+//App.vue
+<script>
+//导入子组件
+import HelloWorld from './components/HelloWorld.vue'
+export default {
+    //定义组建名称
+  name: 'App',
+  components: { //子组件内容
+    HelloWorld //声明子组建
+  }
+}
+</script>
+
+//HelloWorld.vue
+<script>
+export default {
+  name: 'HelloWorld',
+  props: { //从父组件获取参数
+    msg: String
+  }
+}
+</script>
+
+//vue运行：
+main.js调用主组件，主组建再引入子组件，通过组件通信运行
+
+//v-bind v-if v-for v-show用法
