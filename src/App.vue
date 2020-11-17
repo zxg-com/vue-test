@@ -5,6 +5,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <greeting></greeting>
     <ProjectList></ProjectList>
+    <login></login>
   </div>
 </template>
 
@@ -13,12 +14,15 @@
 import HelloWorld from './components/HelloWorld.vue'
 import greeting from "./components/greeting"
 import ProjectList from "./components/ProjectList"
+import login from "./components/login";
+
 export default {
   name: 'App',
   components: { //声明子组件内容
     HelloWorld,
     greeting,
-    ProjectList
+    ProjectList,
+    login
   }
 }
 </script>

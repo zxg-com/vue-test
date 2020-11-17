@@ -2,7 +2,7 @@
     <div class="msg">
         <!-- 插值表达式 data对象引入变量-->
         <p>{{message}} {{name}}</p>
-        <!-- 绑定属性值用v-bind  v-开头是vue的指令-->
+        <!-- 绑定属性值用v-bind 或者直接: v-开头是vue的指令-->
         <span v-bind:title="dream">v-bind设置属性值</span>
         <!-- v-if  判断元素是否显示 每次都会创建或删除元素-->
         <p v-if="isDisplay">v-if测试</p>
